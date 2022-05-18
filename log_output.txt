@@ -1,0 +1,9 @@
+[Hwanu Jung] Sun May 1 21:29:53 2022 +0900 Add gitignore 1c2e61b
+[Hwanu Jung] Sun May 1 21:28:33 2022 +0900 Add gitignore bb2acfd
+[Hwanu Jung] Sun May 1 21:26:37 2022 +0900 Add gitignore b72a9d5
+[Hwanu Jung] Sun May 1 21:21:59 2022 +0900 2022-04-30 Use Case Diagram 최종 df0b70a
+[Hwanu Jung] Sat Apr 30 19:24:20 2022 +0900 2022-04-30 Use Case Diagram 최종 466157c
+[Hwanu Jung] Sat Apr 30 19:00:00 2022 +0900 2022-04-30 Use Case Description 및 UI d8028d1
+[Hwanu Jung] Wed Apr 27 22:59:22 2022 +0900 2022-04-27 Use Case Diagram 회의 바탕으로 수정 e2fc83e
+[Hwanu Jung] Tue Apr 26 04:03:02 2022 +0900 Draw Use Case Diagram 5e7cabe
+[Hwanwoo Jung] Sat Apr 23 19:05:07 2022 +0900 Initial commit 15a98fa

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9993991128485DF1007A32CB /* FileInOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9993990F28485DF1007A32CB /* FileInOut.cpp */; };
+		9993991428487AC3007A32CB /* BuyProduct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9993991228487AC3007A32CB /* BuyProduct.cpp */; };
+		99939917284883D2007A32CB /* ShowPurchaseHistory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99939915284883D2007A32CB /* ShowPurchaseHistory.cpp */; };
+		9993991A284888E0007A32CB /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99939918284888E0007A32CB /* Score.cpp */; };
 		999446A528463AFC0091DA13 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 999446A428463AFC0091DA13 /* main.cpp */; };
 		999446AE2847B5FE0091DA13 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 999446AC2847B5FE0091DA13 /* Product.cpp */; };
 		999446B12847B6200091DA13 /* Member.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 999446AF2847B6200091DA13 /* Member.cpp */; };
@@ -29,6 +33,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9993990F28485DF1007A32CB /* FileInOut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileInOut.cpp; sourceTree = "<group>"; };
+		9993991028485DF1007A32CB /* FileInOut.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileInOut.hpp; sourceTree = "<group>"; };
+		9993991228487AC3007A32CB /* BuyProduct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BuyProduct.cpp; sourceTree = "<group>"; };
+		9993991328487AC3007A32CB /* BuyProduct.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BuyProduct.hpp; sourceTree = "<group>"; };
+		99939915284883D2007A32CB /* ShowPurchaseHistory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShowPurchaseHistory.cpp; sourceTree = "<group>"; };
+		99939916284883D2007A32CB /* ShowPurchaseHistory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShowPurchaseHistory.hpp; sourceTree = "<group>"; };
+		99939918284888E0007A32CB /* Score.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Score.cpp; sourceTree = "<group>"; };
+		99939919284888E0007A32CB /* Score.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Score.hpp; sourceTree = "<group>"; };
 		999446A128463AFC0091DA13 /* SEhw3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SEhw3; sourceTree = BUILT_PRODUCTS_DIR; };
 		999446A428463AFC0091DA13 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; tabWidth = 5; };
 		999446AC2847B5FE0091DA13 /* Product.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Product.cpp; sourceTree = "<group>"; };
@@ -75,19 +87,27 @@
 		999446A328463AFC0091DA13 /* SEhw3 */ = {
 			isa = PBXGroup;
 			children = (
+				99939918284888E0007A32CB /* Score.cpp */,
+				99939919284888E0007A32CB /* Score.hpp */,
+				99939916284883D2007A32CB /* ShowPurchaseHistory.hpp */,
+				99939915284883D2007A32CB /* ShowPurchaseHistory.cpp */,
+				9993991228487AC3007A32CB /* BuyProduct.cpp */,
+				9993991328487AC3007A32CB /* BuyProduct.hpp */,
 				999446B62847B88E0091DA13 /* PurchasedProduct.hpp */,
 				999446B52847B88E0091DA13 /* PurchasedProduct.cpp */,
 				999446A428463AFC0091DA13 /* main.cpp */,
 				999446AC2847B5FE0091DA13 /* Product.cpp */,
+				999446B32847B7CB0091DA13 /* ProductCollection.hpp */,
 				999446AD2847B5FE0091DA13 /* Product.hpp */,
 				999446AF2847B6200091DA13 /* Member.cpp */,
 				999446B02847B6200091DA13 /* Member.hpp */,
 				999446B22847B7CB0091DA13 /* ProductCollection.cpp */,
-				999446B32847B7CB0091DA13 /* ProductCollection.hpp */,
 				999446B82847B8E10091DA13 /* PurchasedProductCollection.cpp */,
 				999446B92847B8E10091DA13 /* PurchasedProductCollection.hpp */,
 				999446BB2847BB920091DA13 /* SearchProduct.cpp */,
 				999446BC2847BB920091DA13 /* SearchProduct.hpp */,
+				9993990F28485DF1007A32CB /* FileInOut.cpp */,
+				9993991028485DF1007A32CB /* FileInOut.hpp */,
 			);
 			path = SEhw3;
 			sourceTree = "<group>";
@@ -151,10 +171,14 @@
 			files = (
 				999446B72847B88E0091DA13 /* PurchasedProduct.cpp in Sources */,
 				999446BD2847BB920091DA13 /* SearchProduct.cpp in Sources */,
+				9993991428487AC3007A32CB /* BuyProduct.cpp in Sources */,
 				999446BA2847B8E10091DA13 /* PurchasedProductCollection.cpp in Sources */,
 				999446B12847B6200091DA13 /* Member.cpp in Sources */,
 				999446A528463AFC0091DA13 /* main.cpp in Sources */,
+				9993991A284888E0007A32CB /* Score.cpp in Sources */,
+				9993991128485DF1007A32CB /* FileInOut.cpp in Sources */,
 				999446AE2847B5FE0091DA13 /* Product.cpp in Sources */,
+				99939917284883D2007A32CB /* ShowPurchaseHistory.cpp in Sources */,
 				999446B42847B7CB0091DA13 /* ProductCollection.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

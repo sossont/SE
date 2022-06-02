@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 
+
 class PurchasedProduct{
 private:
     int productId;

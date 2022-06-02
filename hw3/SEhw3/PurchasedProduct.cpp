@@ -28,6 +28,6 @@ void PurchasedProduct::setScore(int score){
     this ->  score = score;
 }
 
-int Purchased::getProductId(){
+int PurchasedProduct::getProductId(){
     return this -> productId;
 }

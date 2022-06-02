@@ -8,20 +8,32 @@
 #include "SearchProduct.hpp"
 
 //SearchProductUi 내부함수 구현
+extern Product productList[100];
+extern int productNum = 0;
 
-
-void SearchProductUI::SelectProduct(){
-    
-    
+string SearchProductUI::selectProduct(FILE* in_fp){
+    char tmp[100];
+    fscanf(in_fp, "%s", tmp);
+    string name(tmp);
+    return name;
 }
 
-void
+void SearchProductUI::showInterface(FILE* out_fp){
+    char* out = "4.1. 상품 정보 검색\n";
+    fprintf(out_fp, "%s", out);
+}
 
 //SearchProudct 내부 함수 구현
-SearchProduct::SearchProduct(){
-   this -> ui.startInterface()
+SearchProduct::SearchProduct(FILE * in_fp, FILE* out_fp){
+    string nowSearchProduct = this -> ui.selectProduct(in_fp);
+    this -> nowSearchProduct = this -> showProduct(nowSearchProduct);
+    ui.showInterface(out_fp);
+    
 }
 
+int SearchProduct::getNowSearchProduct(){
+    return this ->  nowSearchProduct;
+}
 
 int SearchProduct::showProduct(string name){
     for(int i=0; i < productNum; i++){

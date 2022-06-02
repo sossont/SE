@@ -1,5 +1,6 @@
 #ifndef UNTITLED2_PRODUCT_H
 #define UNTITLED2_PRODUCT_H
+#define MAX_STRING 32
 #include <vector>
 #include <string>
 #include <iostream>
@@ -14,7 +15,8 @@ using namespace std;
 
 class Product {
 private:
-    string name;
+    string sellerName;
+    string productName;
     string companyName;
     int productId;
     int price;  // 가격
@@ -24,10 +26,18 @@ private:
 
 public:
     Product() = default;
-    Product(string productName, string companyName, int productId, int price, int count);
+    Product(string sellerName, string productName, string companyName, int productId, int price, int count);
     void getProductDetail(); // 상품 디테일 정보 가져오는 함수. 상품 정보 출력해준다.
     void getSoldOutProductDetail();
     void getProductStat();
+    void changeProductAmount();
+    //void searchProduct(string productName);
+
+    string getName(){return this->productName; }
+    int getStockCount(){ return this -> stockCount; }
+    void addScore(int score);
+    string getCompanyName(){return this -> companyName;}
+
 };
 
 // Class : ProductCollection
@@ -40,7 +50,7 @@ private:
 
 public:
     ProductCollection() = default;
-    void addNewProduct(string productName, string companyName, int price, int count); // 3.1 판매 상품 등록. 상품명, 제작회사명, 가격, 수량
+    void addNewProduct(string sellerName, string productName, string companyName, int price, int count); // 3.1 판매 상품 등록. 상품명, 제작회사명, 가격, 수량
     void getAllProducts(); // 3.2 등록 상품 조회. 모든 ownedProduct 순회하면서 상품명, 제작회사명, 가격, 수량 출력하면 된다.
     void getSoldOutProducts();   // 3.3 판매 완료 상품 조회
     void getAllProductStats();  // 5.1 판매 상품 통계 출력하는 함수.
@@ -54,7 +64,7 @@ public:
 class AddProductUI{
 public:
     AddProductUI() = default;
-    void addProduct(string productName, string companyName, int price, int count);
+    void addProduct(string sellerName, string productName, string companyName, int price, int count);
 };
 
 // Class : AddProduct
@@ -64,7 +74,7 @@ public:
 class AddProduct{
 public:
     AddProduct() = default;
-    void addProduct(string productName, string companyName, int price, int count);
+    void addProduct(string sellerName, string productName, string companyName, int price, int count);
 };
 
 // Class : CalculateUI

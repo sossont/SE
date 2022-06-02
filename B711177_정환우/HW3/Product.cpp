@@ -6,9 +6,10 @@ extern Product productList[100];
 extern FILE* in_fp, *out_fp;
 extern ProductCollection now_product_collection;
 
-Product::Product(string productName, string companyName, int productId, int price, int count) {
+Product::Product(string sellerName, string productName, string companyName, int productId, int price, int count) {
+    this->sellerName = sellerName;
     this->productId = productId;
-    this->name = productName;
+    this->productName = productName;
     this->companyName = companyName;
     this->price = price;
     this->count = count;
@@ -20,8 +21,8 @@ Product::Product(string productName, string companyName, int productId, int pric
 // Created: 2022/5/31 18:00
 // Author: 정환우
 void Product::getProductDetail() {
-    fprintf(out_fp, "%s %s %d %d\n\n", this->name.c_str(), this->companyName.c_str(), this->price, this->stockCount);
-    // cout << this->name << " " << this->companyName << " " << this->price << " " << this->stockCount << endl;
+    fprintf(out_fp, "%s %s %d %d\n\n", this->productName.c_str(), this->companyName.c_str(), this->price, this->stockCount);
+    // cout << this->productName << " " << this->companyName << " " << this->price << " " << this->stockCount << endl;
 }
 
 // Function : getSoldOutProductDetail
@@ -34,7 +35,7 @@ void Product::getSoldOutProductDetail() {
     if (this->stockCount != 0){
         return;
     }
-    fprintf(out_fp, "%s %s %d %d %d\n\n", this->name.c_str(), this->companyName.c_str(), this->price, this->count, this->score);
+    fprintf(out_fp, "%s %s %d %d %d\n\n", this->productName.c_str(), this->companyName.c_str(), this->price, this->count, this->score);
 }
 
 // Function : getAllProductStats
@@ -49,7 +50,16 @@ void Product::getProductStat() {
     {
         averageScore = double(this->score) / double(sellCount); // 평균 구매만족도 = 총 만족도 / 판매 수량
     }
-    fprintf(out_fp, "%s %d %.1f\n", this->name.c_str(),  totalPrice, averageScore);
+    fprintf(out_fp, "%s %d %.1f\n", this->productName.c_str(), totalPrice, averageScore);
+}
+
+void Product::addScore(int score){
+    this -> score += score;
+}
+
+void Product::changeProductAmount(){
+
+    this -> stockCount = this->stockCount -1;
 }
 
 // Function : getAllProductStats
@@ -87,23 +97,23 @@ void ProductCollection::getSoldOutProducts() {
 // Created: 2022/5/31 18:00
 // Author: 정환우
 
-void ProductCollection::addNewProduct(string productName, string companyName, int price, int count) {
-    Product product = *new Product(productName, companyName, productNum, price, count);
+void ProductCollection::addNewProduct(string sellerName, string productName, string companyName, int price, int count) {
+    Product product = *new Product(sellerName, productName, companyName, productNum, price, count);
     // 전역 배열에 추가
     product.getProductDetail();
     productList[productNum++] = product;
     this->ownedProduct.push_back(product);
 }
 
-void AddProductUI::addProduct(string productName, string companyName, int price, int count) {
+void AddProductUI::addProduct(string sellerName,string productName, string companyName, int price, int count) {
     fprintf(out_fp, "3.1. 판매 의류 등록\n");
     AddProduct addProduct;
-    addProduct.addProduct(productName, companyName, price, count);
+    addProduct.addProduct(sellerName, productName, companyName, price, count);
 }
 
-void AddProduct::addProduct(string productName, string companyName, int price, int count) {
+void AddProduct::addProduct(string sellerName, string productName, string companyName, int price, int count) {
     // Member의 productCollection
-    now_product_collection.addNewProduct(productName,companyName,price,count);
+    now_product_collection.addNewProduct(sellerName, productName,companyName,price,count);
 }
 
 // Function : calculateAllProductStats

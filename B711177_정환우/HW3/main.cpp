@@ -11,8 +11,12 @@ using namespace std;
 // 제품 메모리 저장소
 int productNum = 0;
 Product productList[100];
+
 // 변수 선언
 FILE* in_fp, *out_fp;
+
+// 현재 고객의 product collection
+ProductCollection now_product_collection;
 
 void doTask();
 
@@ -29,11 +33,11 @@ void doTask() {
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
     int is_program_exit = 0;
-
+    ProductCollection new_product_collection;
+    now_product_collection = new_product_collection;
     while (!is_program_exit) {
         // 입력파일에서 메뉴 숫자 2개를 읽기
         fscanf(in_fp, "%d %d ", &menu_level_1, &menu_level_2);
-
         // 메뉴 구분 및 해당 연산 수행
         switch (menu_level_1) {
             case 1: {
@@ -48,6 +52,7 @@ void doTask() {
                         break;
                     }
                 }
+                break;
             }
 
             case 3:
@@ -63,20 +68,37 @@ void doTask() {
                         string companyName(tmp2);
                         AddProductUI addProductUi;
                         addProductUi.addProduct(productName,companyName,price,count);
+                        break;
                     }
                     case 2: // 3.2 등록 상품 조회 부분
                     {
                         GetProductsUI getProductsUi;
-                        getProductsUi.getProducts();
+                        getProductsUi.getProductList();
+                        break;
                     }
                     case 3: // 3.3 판매 완료 상품 조회 부분
                     {
                         GetSoldOutProductUI getSoldOutProductUi;
-                        getSoldOutProductUi.getSoldOutProduct();
+                        getSoldOutProductUi.getSoldOutProducts();
+                        break;
                     }
                 }
+                break;
             }
-            case 7: {
+
+            case 5:
+            {
+                switch (menu_level_2){
+                    case 1: // 5.1 판매 상품 통계 부분
+                    {
+                        CalculateUI calculateUi;
+                        calculateUi.calculateAllProductStats();
+                        break;
+                    }
+                }
+                break;
+            }
+            case 6: {
                 switch (menu_level_2) {
                     case 1:   // "6.1. 종료“ 메뉴 부분
                     {
@@ -85,6 +107,7 @@ void doTask() {
                         break;;
                     }
                 }
+                break;
             }
 
         }

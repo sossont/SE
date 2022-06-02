@@ -41,9 +41,9 @@ private:
 public:
     ProductCollection() = default;
     void addNewProduct(string productName, string companyName, int price, int count); // 3.1 판매 상품 등록. 상품명, 제작회사명, 가격, 수량
-    void getAllProduct(); // 3.2 등록 상품 조회. 모든 ownedProduct 순회하면서 상품명, 제작회사명, 가격, 수량 출력하면 된다.
+    void getAllProducts(); // 3.2 등록 상품 조회. 모든 ownedProduct 순회하면서 상품명, 제작회사명, 가격, 수량 출력하면 된다.
     void getSoldOutProducts();   // 3.3 판매 완료 상품 조회
-    void getProductStat();  // 5.1 판매 상품 통계 출력하는 함수.
+    void getAllProductStats();  // 5.1 판매 상품 통계 출력하는 함수.
 };
 
 // Class : AddProductUI
@@ -74,7 +74,7 @@ public:
 class CalculateUI{
 public:
     CalculateUI() = default;
-    void calculate();
+    void calculateAllProductStats();
 };
 
 // Class : Calculate
@@ -84,7 +84,7 @@ public:
 class Calculate{
 public:
     Calculate() = default;
-    void calculate();
+    void calculateAllProductStats();
 };
 
 // Class : GetProductsUI
@@ -94,7 +94,7 @@ public:
 class GetProductsUI{
 public:
     GetProductsUI() = default;
-    void getProducts();
+    void getProductList();
 };
 
 // Class : GetProducts
@@ -104,7 +104,7 @@ public:
 class GetProducts{
 public:
     GetProducts() = default;
-    void getProducts();
+    void getProductList();
 };
 
 // Class : GetSoldOutProductUI{
@@ -114,7 +114,7 @@ public:
 class GetSoldOutProductUI{
 public:
     GetSoldOutProductUI() = default;
-    void getSoldOutProduct();
+    void getSoldOutProducts();
 };
 
 // Class : GetSoldOutProduct
@@ -124,6 +124,6 @@ public:
 class GetSoldOutProduct{
 public:
     GetSoldOutProduct() = default;
-    void getSoldOutProduct();
+    void getSoldOutProducts();
 };
 #endif

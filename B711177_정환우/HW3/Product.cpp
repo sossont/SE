@@ -1,8 +1,10 @@
 #include "Product.h"
 
+// Main 함수에서 사용하는 변수들 공유해서 사용하기 위함
 extern int productNum;
 extern Product productList[100];
 extern FILE* in_fp, *out_fp;
+extern ProductCollection now_product_collection;
 
 Product::Product(string productName, string companyName, int productId, int price, int count) {
     this->productId = productId;
@@ -18,7 +20,7 @@ Product::Product(string productName, string companyName, int productId, int pric
 // Created: 2022/5/31 18:00
 // Author: 정환우
 void Product::getProductDetail() {
-    fprintf(out_fp, "%s %s %d %d", this->name.c_str(), this->companyName.c_str(), this->price, this->stockCount);
+    fprintf(out_fp, "%s %s %d %d\n\n", this->name.c_str(), this->companyName.c_str(), this->price, this->stockCount);
     // cout << this->name << " " << this->companyName << " " << this->price << " " << this->stockCount << endl;
 }
 
@@ -32,42 +34,45 @@ void Product::getSoldOutProductDetail() {
     if (this->stockCount != 0){
         return;
     }
-
-    cout << this->name << " " << this->companyName << " " << this -> price << " " << this->count << " " << this->score << endl;
+    fprintf(out_fp, "%s %s %d %d %d\n\n", this->name.c_str(), this->companyName.c_str(), this->price, this->count, this->score);
 }
 
-// Function : getProductStat
+// Function : getAllProductStats
 // Description: 판매 상품 통계 출력하는 함수.
 // Created: 2022/5/31 18:00
 // Author: 정환우
 void Product::getProductStat() {
     int sellCount = this->count - this->stockCount; // 현재 판매량 = 총 수량 - 현재 수량
     int totalPrice = this->price * sellCount;
-    int averageScore = this->score / sellCount; // 평균 구매만족도 = 총 만족도 / 판매 수량
-    cout << this->name << " " << totalPrice << " " << averageScore << endl;
+    double averageScore = 0;    // 만약 판매량이 0개이면 score 가 0일 것
+    if (sellCount != 0)
+    {
+        averageScore = double(this->score) / double(sellCount); // 평균 구매만족도 = 총 만족도 / 판매 수량
+    }
+    fprintf(out_fp, "%s %d %.1f\n", this->name.c_str(),  totalPrice, averageScore);
 }
 
-// Function : getProductStat
+// Function : getAllProductStats
 // Description: 컬렉션 순회 돌면서, 판매 통계 출력 한다.
 // Created: 2022/5/31 18:00
 // Author: 정환우
-void ProductCollection::getProductStat() {
+void ProductCollection::getAllProductStats() {
     for (auto product : ownedProduct) {
         product.getProductStat();
     }
 }
 
-// Function : getAllProduct
+// Function : getAllProducts
 // Description: 등록 상품 조회하는 함수로, 컬렉션 순회를 돌면서 상품 정보 출력한다.
 // Created: 2022/5/31 18:00
 // Author: 정환우
-void ProductCollection::getAllProduct() {
+void ProductCollection::getAllProducts() {
     for (auto product : ownedProduct) {
         product.getProductDetail();
     }
 }
 
-// Function : getSoldOutProduct
+// Function : getSoldOutProducts
 // Description: 컬렉션 순회 돌며 판매 완료된 상품 상세 정보 출력
 // Created: 2022/5/31 18:00
 // Author: 정환우
@@ -97,33 +102,61 @@ void AddProductUI::addProduct(string productName, string companyName, int price,
 }
 
 void AddProduct::addProduct(string productName, string companyName, int price, int count) {
-    ProductCollection productCollection;    // Member의 productCollection
-    productCollection.addNewProduct(productName,companyName,price,count);
+    // Member의 productCollection
+    now_product_collection.addNewProduct(productName,companyName,price,count);
 }
 
-void CalculateUI::calculate() {
+// Function : calculateAllProductStats
+// Description: Boundary 클래스 구현. 통계를 위한 control class 함수 호출.
+// Created: 2022/6/2/13:20
+// Author: 정환우
+void CalculateUI::calculateAllProductStats() {
     fprintf(out_fp, "5.1 판매 상품 통계\n");
+    Calculate calculate;
+    calculate.calculateAllProductStats();
 }
 
-void Calculate::calculate() {
-
+// Function : calculateAllProductStats
+// Description: 컬렉션에서 통계 조회 하기
+// Created: 2022/6/2/13:20
+// Author: 정환우
+void Calculate::calculateAllProductStats() {
+    now_product_collection.getAllProductStats();
 }
 
-void GetProductsUI::getProducts() {
-    fprintf(out_fp, "3.2. 등록 상품 조회\n");
+// Function : getProductList
+// Description: 등록 상품 조회를 위한 control class 함수 호출
+// Created: 2022/6/2/13:20
+// Author: 정환우
+void GetProductsUI::getProductList() {
     GetProducts getProducts;
-    getProducts.getProducts();
+    getProducts.getProductList();
 }
 
-void GetProducts::getProducts() {
-    ProductCollection productCollection;
-    productCollection.getAllProduct();
+// Function : getProductList
+// Description: 컬렉션에서 모든 상품 상세 조회.
+// Created: 2022/6/2/13:20
+// Author: 정환우
+void GetProducts::getProductList() {
+    fprintf(out_fp, "3.2. 등록 상품 조회\n");
+    now_product_collection.getAllProducts();
 }
 
-void GetSoldOutProduct::getSoldOutProduct() {
+// Function : getSoldOutProducts
+// Description: 판매 완료 상품 조회를 위한 control class 함수 호출
+// Created: 2022/6/2/13:20
+// Author: 정환우
+void GetSoldOutProductUI::getSoldOutProducts() {
+    GetSoldOutProduct getSoldOutProduct;
+    getSoldOutProduct.getSoldOutProducts();
+}
+
+// Function : getSoldOutProducts
+// Description: 컬렉션에서 판매 완료된 상품 호출
+// Created: 2022/6/2/13:20
+// Author: 정환우
+void GetSoldOutProduct::getSoldOutProducts() {
     fprintf(out_fp, "3.3. 판매 완료 상품 조회\n");
+    now_product_collection.getSoldOutProducts();
 }
 
-void GetSoldOutProductUI::getSoldOutProduct() {
-
-}

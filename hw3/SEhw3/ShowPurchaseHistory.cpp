@@ -19,6 +19,9 @@ void ShowPurchasedHistoryUI::showInterface(FILE *out_fp){
 ShowPurchasedHistory::ShowPurchasedHistory(FILE *out_fp){
     this ->inquiryProductList();
     
+    
+    
+    
 }
 
 
@@ -28,8 +31,6 @@ void ShowPurchasedHistory::inquiryProductList(){
     int tmpPid = -1;
     for(int i =0; i< myPurchasedCount; i++){
         tmpPid = nowUser -> getPurchasedProductCollection().getPurchasedProductId(i);
-        //int inquireProductId = tmpPid;
-        //product
         productList[tmpPid].getProductDetail();
     }
 }

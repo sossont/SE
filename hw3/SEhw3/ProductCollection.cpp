@@ -28,7 +28,10 @@ void ProductCollection::getSoldOutProduct() {
 }
 
 // 상품 정보 추가
-void ProductCollection::addNewProduct(string productName, string companyName, int price, int count) {
-    Product product = *new Product(productName, companyName, price, count);
-    ownedProduct.push_back(product);
+void ProductCollection::addNewProduct(string sellerName, string productName, string companyName, int price, int count) {
+    Product product = *new Product(sellerName, productName, companyName, productNum, price, count);
+    // 전역 배열에 추가
+    product.getProductDetail();
+    productList[productNum++] = product;
+    this->ownedProduct.push_back(product);
 }

@@ -18,17 +18,22 @@ string SearchProductUI::selectProduct(FILE* in_fp){
     return name;
 }
 
-void SearchProductUI::showInterface(FILE* out_fp){
+void SearchProductUI::showInterface(FILE *out_fp, string sellerName, string productName, string companyName,int stockCount, float score){
     char* out = "4.1. 상품 정보 검색\n";
-    fprintf(out_fp, "%s", out);
+    fprintf(out_fp, "%d %s %s %s %d %d %f ", sellerName, productName, companyName, stockCount, score);
 }
 
 //SearchProudct 내부 함수 구현
 SearchProduct::SearchProduct(FILE * in_fp, FILE* out_fp){
     string nowSearchProduct = this -> ui.selectProduct(in_fp);
+    //현재 찾은 프로덕트ㄹ의 id값 받아옴
     this -> nowSearchProduct = this -> showProduct(nowSearchProduct);
-    ui.showInterface(out_fp);
-    
+    string companyName = productList[this->nowSearchProduct].getCompanyName();
+    string productName = productList[this->nowSearchProduct].getProductName();
+    string sellerName = productList[this->nowSearchProduct].getSellerName();
+    int stockCount = productList[this->nowSearchProduct].getStockCount();
+    float score = productList[this->nowSearchProduct].getAvgScore();
+    ui.showInterface(out_fp,sellerName,productName, companyName, stockCount, score);
 }
 
 int SearchProduct::getNowSearchProduct(){
@@ -37,8 +42,7 @@ int SearchProduct::getNowSearchProduct(){
 
 int SearchProduct::showProduct(string name){
     for(int i=0; i < productNum; i++){
-        if(productList[i].getName() == name){
-            productList[i].getProductDetail();
+        if(productList[i].getProductName() == name){
             return i;
         }
     }

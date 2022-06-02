@@ -29,19 +29,6 @@ int productNum = 0;
 //멤버 저장하기 위한 변수
 MemberCollection* member_list = new MemberCollection;
 
-Member::Member(char name_[MAX_STRING], char ssn_[MAX_STRING], char id_[MAX_STRING], char password_[MAX_STRING]) {
-    strcpy(name, name_);
-    strcpy(ssn, ssn_);
-    strcpy(id, id_);
-    strcpy(password, password_);
-    member_list -> addMembertoCollection(this);
-}
-
-
-// DB 및 외부저장 장치에 연결이 되어있지 않으므로 전역함수로 멤버를 MemberCollection 클래스를 new로 생성해 Member 객체를 관리한다. (중복 가입 확인 및 로그인 확인)
-
-
-
 int inquireProductId = -1;
 
 FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");

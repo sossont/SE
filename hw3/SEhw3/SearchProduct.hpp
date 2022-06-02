@@ -16,6 +16,7 @@
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 #include "Product.hpp"
+
 using namespace std;
 
 class SearchProductUI{
@@ -24,7 +25,7 @@ public:
     //input 
     string selectProduct(FILE *in_fp);
     //output
-    void showInterface(FILE *out_fp);
+    void showInterface(FILE *out_fp, string sellerId, string name, string companyName,int stockCount, float score);
 };
 
 

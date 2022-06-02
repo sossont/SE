@@ -26,5 +26,4 @@ public:
 };
 
 
-
 #endif /* PurchasedProduct_hpp */

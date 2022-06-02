@@ -19,7 +19,7 @@ class ScoreUI{
 private:
 public:
     int scoreProduct(FILE *in_fp);
-    void showInterface(FILE *out_fp, string companyName, string pName, int score));
+    void showInterface(FILE *out_fp, string companyName, string pName, int score);
 };
 
 class Score{

@@ -1,0 +1,21 @@
+수정사항:
+
+- requirment-list: 
+
+1. use case에서 ('영어') 모두 삭제
+
+2. 회원 탈퇴: "탈퇴한 사용자의 권한 삭제할 수 있다." -> "탈퇴한 사용자는 사이트 이용 권한을 잃는다."
+
+- usecase-description:
+
+1. use case에서 ('영어') 모두 삭제
+
+2. 회원 탈퇴: "탈퇴시 서버에 저장된 사용자의 개인정보(이름,주민번호)및 id/password는 삭제된다." 삭제
+
+- use case diagram:
+
+1. Use case 및 actor 괄호의 영어 샂게
+
+- communication diagram:
+
+전체 수정

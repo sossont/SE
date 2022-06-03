@@ -1,4 +1,41 @@
+<<<<<<< HEAD
 [kerryfrog] Sun May 1 01:09:19 2022 +0900 write usecase description and draw ui 244236f
 [kerryfrog] Fri Apr 29 01:27:00 2022 +0900 draw own usecase a67075e
 [kerryfrog] Wed Apr 27 01:57:15 2022 +0900 add Actor 799c971
+=======
+[Dong Woo Suh] Wed May 18 21:04:54 2022 +0900 Merge pull request #8 from sossont/B635185 2577f24
+[Dong Woo Suh] Wed May 18 21:01:37 2022 +0900 과제2 최종수정 user 82acf7f
+[Dong Woo Suh] Wed May 18 14:12:28 2022 +0900 20220517 내용 23ec923
+[Hwanu Jung] Wed May 18 13:55:31 2022 +0900 Merge Conflict 해결 92df023
+[Hwanu Jung] Wed May 18 13:43:18 2022 +0900 Merge branch 'b711177' b371c76
+[Hwanu Jung] Wed May 18 13:43:05 2022 +0900 Merge branch 'main' into b711177 423b732
+[Hwanwoo Jung] Wed May 18 13:42:47 2022 +0900 B911122 HW2 (#7) 416ac47
+[Hwanu Jung] Wed May 18 13:42:20 2022 +0900 Diagram 총 정리 및 보고서 작성 527d2c5
+[kerryfrog] Tue May 17 22:27:05 2022 +0900 draw analysis diagram ef86780
+[Hwanu Jung] Tue May 17 18:56:36 2022 +0900 Communication Diagram 최종 수정 1213d66
+[kerryfrog] Tue May 17 00:58:03 2022 +0900 draw communication diagram 44677b8
+[Dong Woo Suh] Sun May 15 04:29:47 2022 +0900 hw2 1일차 커밋 8f8c734
+[Hwanu Jung] Sat May 14 21:38:53 2022 +0900 Use Case Diagram 및 Sequnce Diagram 작성 59d07e4
+[Dong Woo Suh] Sun May 1 23:05:46 2022 +0900 Merge pull request #5 from sossont/B635185 ee759f4
+[Dong Woo Suh] Sun May 1 22:43:21 2022 +0900 파일을 모두 하위 폴더에 옮기기 4f4ee02
+[Hwanu Jung] Sun May 1 21:35:10 2022 +0900 Create Log File 301ab7a
+[Hwanu Jung] Sun May 1 21:29:53 2022 +0900 Add gitignore 1c2e61b
+[Hwanwoo Jung] Sun May 1 21:29:41 2022 +0900 Merge pull request #4 from sossont/b711177 097dd66
+[Hwanwoo Jung] Sun May 1 21:29:04 2022 +0900 Delete .DS_Store 5207696
+[Hwanu Jung] Sun May 1 21:28:33 2022 +0900 Add gitignore bb2acfd
+[Hwanu Jung] Sun May 1 21:26:37 2022 +0900 Add gitignore b72a9d5
+[Hwanu Jung] Sun May 1 21:22:32 2022 +0900 Merge branch 'B911122' c66bf10
+[Hwanu Jung] Sun May 1 21:21:59 2022 +0900 2022-04-30 Use Case Diagram 최종 df0b70a
+[kerryfrog] Sun May 1 01:09:19 2022 +0900 write usecase description and draw ui 244236f
+[Dong Woo Suh] Sat Apr 30 23:49:08 2022 +0900 UI Designs for use cases for actor seller and use case in refund fbcdf68
+[Dong Woo Suh] Sat Apr 30 23:45:06 2022 +0900 Actor descriptions and Use Case descriptions related to Selling and refunding 02e8c07
+[Hwanu Jung] Sat Apr 30 19:24:20 2022 +0900 2022-04-30 Use Case Diagram 최종 466157c
+[Hwanu Jung] Sat Apr 30 19:00:00 2022 +0900 2022-04-30 Use Case Description 및 UI d8028d1
+[kerryfrog] Fri Apr 29 01:27:00 2022 +0900 draw own usecase a67075e
+[Dong Woo Suh] Thu Apr 28 19:59:38 2022 +0900 ADD Individual Prototype User Case Diagram 06ee8c1
+[Hwanu Jung] Wed Apr 27 22:59:22 2022 +0900 2022-04-27 Use Case Diagram 회의 바탕으로 수정 e2fc83e
+[kerryfrog] Wed Apr 27 01:57:15 2022 +0900 add Actor 799c971
+[Dong Woo Suh] Tue Apr 26 20:57:23 2022 +0900 Add Requirment List 7418dbf
+[Hwanu Jung] Tue Apr 26 04:03:02 2022 +0900 Draw Use Case Diagram 5e7cabe
+>>>>>>> main
 [Hwanwoo Jung] Sat Apr 23 19:05:07 2022 +0900 Initial commit 15a98fa

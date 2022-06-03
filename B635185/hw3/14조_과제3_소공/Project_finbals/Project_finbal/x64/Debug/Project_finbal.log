@@ -1,0 +1,10 @@
+﻿  Buy.cpp
+  main.cpp
+c:\users\user\source\repos\14조_과제3_소공\project_finbals\project_finbal\main.cpp(9): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+  c:\users\user\source\repos\14조_과제3_소공\project_finbals\project_finbal\main.cpp: note: '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+  Member.cpp
+  Product.cpp
+c:\users\user\source\repos\14조_과제3_소공\project_finbals\project_finbal\product.cpp(40): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\user\source\repos\14조_과제3_소공\project_finbals\project_finbal\product.cpp(69): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  Project_finbal.vcxproj -> C:\Users\user\source\repos\14조_과제3_소공\Project_finbals\x64\Debug\Project_finbal.exe

@@ -1,0 +1,59 @@
+commit 39d69ad020a55a74a10ad7d6ecf440f3428cfa98
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Fri Jun 3 13:54:52 2022 +0900
+
+    'hw3'
+
+commit 82acf7f4926452386be49def4aa477408f71f2bb
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Wed May 18 21:01:37 2022 +0900
+
+    과제2 최종수정 user
+
+commit 23ec923cef6bc18ee909ff410aae3d695e2d2a7c
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Wed May 18 14:12:28 2022 +0900
+
+    20220517 내용
+
+commit 8f8c73413d0c2f99ad2359c5e3e45f0201b6c1ed
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Sun May 15 04:29:47 2022 +0900
+
+    hw2 1일차 커밋
+
+commit 4f4ee02e63bfd780fd4af78b40a8fe778e2a4d5d
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Sun May 1 22:43:21 2022 +0900
+
+    파일을 모두 하위 폴더에 옮기기
+
+commit fbcdf68ae970bcdf9a509dd21a318586dfca6ecb
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Sat Apr 30 23:49:08 2022 +0900
+
+    UI Designs for use cases for actor seller and use case in refund
+
+commit 02e8c0747ff496ef0f6030bc3ecff30b93d68b8e
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Sat Apr 30 23:45:06 2022 +0900
+
+    Actor descriptions and Use Case descriptions related to Selling and refunding
+
+commit 06ee8c1f3aa0f5e20ad98de4dca276a4900ca185
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Thu Apr 28 19:59:38 2022 +0900
+
+    ADD Individual Prototype User Case Diagram
+
+commit 7418dbf4292a570a3f895092af3b1b35c5edc5bc
+Author: Dong Woo Suh <vsbycp22@gmail.com>
+Date:   Tue Apr 26 20:57:23 2022 +0900
+
+    Add Requirment List
+
+commit 15a98fac1d14f30ab883a778ad8b2e78cd5fb789
+Author: Hwanwoo Jung <69099144+sossont@users.noreply.github.com>
+Date:   Sat Apr 23 19:05:07 2022 +0900
+
+    Initial commit
